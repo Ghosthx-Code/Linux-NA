@@ -5,24 +5,19 @@
 # It automatically installs and configures Zsh, creates your ~/.config/zsh
 # directory, and populates it with the necessary configuration files.
 # No manual setup required!
-
+# will not work if no zsh or no setup.sh 
 # --------------------------------------------------
 # 📦 Quick Installation
 # --------------------------------------------------
 
 # 1. Download the setup script
-curl -O https://raw.githubusercontent.com/your-repo/linux-na/main/setup.sh
+git clone https://github.com/Ghosthx-Code/Linux-NA/tree/zshrc
 
-# 2. Make it executable
-chmod +x setup.sh
-
-# 3. Run the script to install and configure Zsh
-./setup.sh
-
+cd ~/.config/zsh/.zshrc
+#add .zshrc from the githib to the .zshrc
 # --------------------------------------------------
 # ⚙️ What This Does
 # --------------------------------------------------
-# - Installs Zsh (if not already installed)
 # - Sets Zsh as your default shell
 # - Creates ~/.config/zsh directory
 # - Applies preconfigured .zshrc and theme settings
