@@ -1,5 +1,7 @@
 # 🚀 Getting Started with Linux-NA
 
+This is for Ubuntu
+
 The `setup.sh` script is designed to be a "one-and-done" if you have all of `~/setup` folder. It automatically generates your `~/.config` directories and populates them with the correct files. No manual folder creation required!
 
 Make Sure you put all the files in there dir and make a folder call `main_setup` you will put all the files, folders in there
