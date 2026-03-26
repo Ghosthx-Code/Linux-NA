@@ -1,0 +1,55 @@
+{
+    "apps": [
+        // --- Multimedia & Creative ---
+        "obs-studio",
+        "vlc",
+        "ffmpeg",
+        "audacity",           // Audio editing
+        "kdenlive",           // Powerful video editor
+
+        // --- System UI & Desktop ---
+        "rofi",
+        "waybar",
+        "obsidian-icon-theme",
+        "fonts-symbols-nerd-font",
+        "papirus-icon-theme", // Popular clean icon alternative
+
+        // --- Development & Coding ---
+        "python3.13",
+        "git",
+        "curl",
+        "wget",               // Standard file downloader
+        "jq",                 // JSON processor for terminal
+        "fzf",                // Fuzzy finder for files/history
+        "ripgrep",            // Extremely fast file search (rg)
+        "build-essential",    // Essential for compiling C/C++ code
+
+        // --- Networking & Cybersecurity ---
+        "nmap",
+        "tcpdump",
+        "wireshark",          // GUI network packet analyzer
+        "netcat-openbsd",     // Versatile networking utility
+        "whois",              // Domain and IP lookup tool
+        "traceroute",         // Path discovery tool
+        "ufw",                // Uncomplicated Firewall management
+
+        // --- System Monitoring & Utilities ---
+        "fastfetch",
+        "htop",
+        "btop",
+        "nvtop",              // GPU resource monitor
+        "ncdu",               // Interactive disk usage analyzer
+        "tmux",               // Terminal multiplexer
+        "neofetch",           // Classic system info (alternative)
+        "bat",                // Better 'cat' with syntax highlighting
+        "eza",                // Modern replacement for 'ls'
+        "tldr",               // Simplified community man pages
+
+        // --- Fun & Visuals ---
+        "cmatrix",
+        "lolcat",
+        "neovim",             // You'll need this for your nvim setup!
+        "zsh"
+    ]
+}
+
