@@ -11,6 +11,7 @@ if [ $? -ne 0 ]; then
     echo "❌ No internet connection. Plug in a cable!"
     exit 1
 fi
+sudo apt clean
 
 # ============================================================
 # 🚀 THE ULTIMATE UBUNTU "GHOST" SETUP SCRIPT
