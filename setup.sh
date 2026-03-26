@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 # Check if user is root/sudo
 if [ "$EUID" -ne 0 ]; then 
   echo "❌ Please run with sudo (sudo ./setup.sh)"
