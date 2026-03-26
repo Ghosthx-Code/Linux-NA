@@ -10,10 +10,14 @@ To get your environment running in seconds, simply copy and paste the command bl
 
 ```bash
 # 1. Download the setup script
-curl -O https://raw.githubusercontent.com
+git clone https://github.com/Linux-NA
 
-# 2. Make it executable
+# 2. dir
+cd Linux-NA/setup
+
+# Give the script permission to run
 chmod +x setup.sh
 
-# 3. Run the magic
+# Run the installer
 ./setup.sh
+
