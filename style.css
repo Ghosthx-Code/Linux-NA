@@ -1,0 +1,66 @@
+/* ============================================================
+   🎨 WAYBAR "EASY-STYLE" (The Look & Feel)
+   ============================================================ */
+
+/* --- 🌍 GLOBAL SETTINGS --- 
+   This applies to everything on the bar. */
+* {
+    /* Make sure you have 'JetBrainsMono Nerd Font' installed for icons! */
+    font-family: "JetBrainsMono Nerd Font Propo", sans-serif;
+    font-size: 14px; 
+    border: none;
+    border-radius: 0;
+}
+
+/* --- 🏗️ THE MAIN BAR --- 
+   This is the long rectangle that holds everything. */
+window#waybar {
+    background-color: #1e1e2e; /* Dark Purple/Blue background */
+    color: #cdd6f4;            /* Light text color */
+    border-bottom: 2px solid #89b4fa; /* A thin blue line at the bottom */
+}
+
+/* --- 💊 THE "PILL" LOOK --- 
+   This makes your modules look like floating rounded buttons. 
+   Add any new module names here (like #battery or #cpu). */
+#workspaces, 
+#clock, 
+#pulseaudio, 
+#network, 
+#cpu, 
+#memory, 
+#tray {
+    background-color: #313244; /* Darker grey for the 'pill' background */
+    color: #89b4fa;            /* Light blue text for icons/info */
+    border-radius: 15px;       /* Makes the corners rounded (Pill shape) */
+    padding: 2px 12px;         /* Space inside the pill (Top/Bottom, Left/Right) */
+    margin: 4px 6px;           /* Space outside the pill so they don't touch */
+}
+
+/* --- 🔘 WORKSPACE BUTTONS --- 
+   How the little icons/numbers for your screens look. */
+#workspaces button {
+    padding: 0 5px;
+    color: #cdd6f4;
+    background: transparent;   /* Keep background clear unless active */
+}
+
+/* THE ACTIVE SCREEN: The one you are currently looking at */
+#workspaces button.active {
+    background-color: #89b4fa; /* Solid Blue background */
+    color: #1e1e2e;            /* Dark text on the blue background */
+    border-radius: 15px;       /* Keep the rounded look */
+}
+
+/* HOVER: What happens when your mouse touches a workspace icon */
+#workspaces button:hover {
+    background: rgba(137, 180, 250, 0.4); /* Faint blue highlight */
+    border-radius: 15px;
+}
+
+/* --- ⚠️ WARNING COLORS --- 
+   Changes colors when things get "Critical" (like low battery) */
+#network.disconnected {
+    background-color: #f38ba8; /* Bright Red background */
+    color: #1e1e2e;            /* Dark text for visibility */
+}
