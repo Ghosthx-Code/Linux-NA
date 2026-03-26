@@ -8,6 +8,7 @@
         "kdenlive",           // Powerful video editor
 
         // --- System UI & Desktop ---
+        "qterminal",
         "rofi",
         "waybar",
         "obsidian-icon-theme",
