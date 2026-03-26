@@ -33,3 +33,25 @@ If you are using these in your **Waybar `style.css`**, define them at the top li
 @define-color base   #1e1e2e;
 @define-color blue   #89b4fa;
 @define-color red    #f38ba8;
+```
+# 🛠️ Linux-NA Customization Guide
+
+### 🛰️ Waybar (The Taskbar)
+Edit these in `~/.config/waybar/`
+
+```jsonc
+// 1. Change Layout (config.jsonc)
+"modules-left": ["wlr/workspaces"],   // Elements on the left
+"modules-center": ["clock"],           // Elements in the middle
+"modules-right": ["pulseaudio"]        // Elements on the right
+
+// 2. Change Colors (style.css)
+#clock {
+    background-color: #313244;  /* Pill Color */
+    color: #89b4fa;             /* Text Color */
+    border-radius: 10px;        /* Roundness */
+}
+
+// 3. Time Format (12h vs 24h)
+"format": "{:%H:%M}"            // 24-Hour (13:00)
+"format": "{:%I:%M %p}"         // 12-Hour (01:00 PM)
