@@ -105,3 +105,4 @@ echo "✅ SETUP COMPLETE! Restarting GNOME Shell is recommended."
 
 bash ~/main_setup/setup/autoRofi.sh
 bash ~/main_setup/setup/autoWayBar.sh
+bash ~/main_setup/setup/autoNvim.sh
