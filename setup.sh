@@ -1,4 +1,16 @@
 #!/bin/bash
+# Check if user is root/sudo
+if [ "$EUID" -ne 0 ]; then 
+  echo "❌ Please run with sudo (sudo ./setup.sh)"
+  exit 1
+fi
+
+# Check for internet connection
+wget -q --spider http://google.com
+if [ $? -ne 0 ]; then
+    echo "❌ No internet connection. Plug in a cable!"
+    exit 1
+fi
 
 # ============================================================
 # 🚀 THE ULTIMATE UBUNTU "GHOST" SETUP SCRIPT
