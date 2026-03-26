@@ -1,0 +1,1 @@
+alias mycmd='python3 /home/ghost/main/zsh/na.py'
