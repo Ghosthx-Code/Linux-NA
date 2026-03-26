@@ -19,10 +19,11 @@ To get your environment running in seconds, simply copy and paste the command bl
 sudo apt update && sudo apt install -y git
 
 # 2. Clone the repository (Into your home folder)
-git clone https://github.com/Ghosthx-Code/Linux-NA
+# It will clone the Setup you need it to make anything work
+git clone https://github.com/Ghosthx-Code/Linux-NA/tree/Setup
 
 # 3. Move into the setup directory
-cd ~/Linux-NA/setup || { echo "❌ Setup folder not found!"; exit 1; }
+cd ~/Linux-NA/setup || { echo " Setup folder not found!"; exit 1; }
 
 # 4. Make the script executable
 chmod +x setup.sh
