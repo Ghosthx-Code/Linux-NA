@@ -49,7 +49,18 @@
         "cmatrix",
         "lolcat",
         "neovim",             // You'll need this for your nvim setup!
-        "zsh"
+        "zsh",
+        
+        // --- 🐧 LINUX-NA AESTHETIC UPGRADE ---
+        "gnome-shell-extension-manager", // The "App Store" for desktop effects
+        "gnome-tweaks",                  // Essential for changing Themes/Icons
+        "papirus-icon-theme",           // Top-tier clean icon set
+        "fonts-jetbrains-mono",         // The best coding font
+        "fonts-font-awesome",           // Support for Waybar/Rofi icons
+        
+        // --- 🛠️ SYSTEM UTILITIES ---
+        "libglib2.0-bin",               // Required for automated GNOME settings
+        "gettext" 
     ]
 }
 
