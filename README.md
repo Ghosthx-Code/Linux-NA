@@ -9,15 +9,20 @@ The `setup.sh` script is designed to be a "one-and-done" solution. It automatica
 To get your environment running in seconds, simply copy and paste the command block below into your terminal:
 
 ```bash
-# 1. Download the setup script
-git clone https://github.com/Linux-NA
+# --- 🚀 THE LINUX-NA ONE-COMMAND INSTALL ---
 
-# 2. dir
-cd Linux-NA/setup
+# 1. Update and ensure Git is installed
+sudo apt update && sudo apt install -y git
 
-# Give the script permission to run
+# 2. Clone the repository (Into your home folder)
+git clone https://github.com ~/Linux-NA
+
+# 3. Move into the setup directory
+cd ~/Linux-NA/setup || { echo "❌ Setup folder not found!"; exit 1; }
+
+# 4. Make the script executable
 chmod +x setup.sh
 
-# Run the installer
+# 5. Launch the Magic 
 ./setup.sh
 
