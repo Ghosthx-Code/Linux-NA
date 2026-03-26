@@ -1,1 +1,1 @@
-alias mycmd='python3 /home/ghost/main/zsh/na.py'
+alias mycmd='python3 /home/ghost/main_setup/zsh/na.py'
