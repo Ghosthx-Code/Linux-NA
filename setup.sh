@@ -13,7 +13,7 @@ sudo add-apt-repository -y ppa:neovim-ppa/stable
 sudo apt update && sudo apt install -y neovim git curl
 
 # Backup old config if it exists so we don't lose anything
-[ -d ~/.config/nvim ] && mv ~/.config/nvim ~/.config/nvim.bak_$(date +%Y%m%d)
+[ -d ~/.config/nvim ] && mv ~/.config/nvim ~/.config/nvim.bak_"$(date +%Y%m%d)"
 
 # Clone a fresh "LazyVim" starter template
 git clone https://github.com/LazyVim/starter ~/.config/nvim
