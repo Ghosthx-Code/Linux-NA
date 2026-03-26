@@ -15,7 +15,7 @@ To get your environment running in seconds, simply copy and paste the command bl
 sudo apt update && sudo apt install -y git
 
 # 2. Clone the repository (Into your home folder)
-git clone https://github.com ~/Linux-NA
+git clone https://github.com/Ghosthx-Code/Linux-NA
 
 # 3. Move into the setup directory
 cd ~/Linux-NA/setup || { echo "❌ Setup folder not found!"; exit 1; }
