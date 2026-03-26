@@ -102,3 +102,6 @@ gsettings set $BIND_PATH:$KEYS/custom4/ command "killall waybar"
 gsettings set $BIND_PATH:$KEYS/custom4/ binding "<Shift><Control><Alt>space"
 
 echo "✅ SETUP COMPLETE! Restarting GNOME Shell is recommended."
+
+bash ~/main_setup/setup/autoRofi.sh
+bash ~/main_setup/setup/autoWayBar.sh
