@@ -1,0 +1,83 @@
+// ============================================================
+// ✨ WAYBAR "EASY-MODE" CONFIGURATION ✨
+// ============================================================
+// Quick Tips:
+// 1. To DISABLE something, put // at the start of the line.
+// 2. To ENABLE something, remove the // from the start.
+// 3. Icons require "Font Awesome" or "Nerd Fonts" installed.
+// ============================================================
+
+{
+    // --- 🖥️ BAR APPEARANCE ---
+    "layer": "top",          // "top" = always visible; "bottom" = windows cover it
+    "position": "top",       // Where it sits: "top", "bottom", "left", or "right"
+    "height": 34,            // Height of the bar in pixels
+    "margin": "5 10 5 10",   // Space around the bar (Top Right Bottom Left)
+    "spacing": 10,           // Space between the buttons/modules
+
+    // --- 🧩 MODULE LAYOUT ---
+    // (Move these names around to change where they sit on your screen)
+    "modules-left":   ["wlr/workspaces", "cpu", "memory"], 
+    "modules-center": ["clock"],
+    "modules-right":  ["pulseaudio", "network", "tray"],
+
+    // --- 🕒 CLOCK & CALENDAR ---
+    "clock": {
+        "format": "🕒 {:%H:%M}",             // %H:%M = 24hr. Change to %I:%M %p for 12hr.
+        "tooltip-format": "📅 {:%A, %B %d}", // Shows full date when you hover
+        "on-click": "gnome-calendar"         // CLICK to open your calendar app
+    },
+
+    // --- 🔊 VOLUME CONTROL ---
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "🔇 Muted",
+        "format-icons": ["", "", ""],
+        "on-click": "pavucontrol",           // LEFT CLICK to open volume mixer
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle" // RIGHT CLICK to mute
+    },
+
+    // --- 🌐 INTERNET & WIFI ---
+    "network": {
+        "format-wifi": "  {essid}",         // Shows WiFi name
+        "format-ethernet": "   Wired",         // Shows when plugged into a cable
+        "format-disconnected": "⚠ No Net",
+        "tooltip-format": "IP: {ipaddr}",    // Hover to see your IP address
+        "on-click": "nm-connection-editor"   // CLICK to pick a WiFi network
+    },
+
+    // --- 🔋 BATTERY (Only shows if you're on a laptop) ---
+    "battery": {
+        "states": { "warning": 30, "critical": 15 },
+        "format": "{icon} {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "format-charging": "   {capacity}%"
+    },
+
+    // --- 🖥️ SYSTEM MONITORS (CPU & RAM) ---
+    "cpu": {
+        "format": " {usage}%",
+        "on-click": "btop"                   // CLICK to see what's slowing your PC
+    },
+    "memory": {
+        "format": " {percentage}%",
+        "tooltip-format": "{used}GB / {total}GB used"
+    },
+
+    // --- 📦 SYSTEM TRAY (Icons like Discord, Steam, etc) ---
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+
+    // --- 🗔 WORKSPACES (The desktop switcher) ---
+    "wlr/workspaces": {
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1", "2": "2", "3": "3", "4": "4", "5": "5",
+            "active": "",                  // Icon for the screen you are on
+            "default": ""                  // Icon for other screens
+        }
+    }
+}
