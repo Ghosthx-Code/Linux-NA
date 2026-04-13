@@ -1,0 +1,90 @@
+# This will OVERWRITE the file with the text below
+cat <<EOF > ~/.config/rofi/config.rasi
+{
+/**
+ * 🚀 ROFI "EASY-MODE" CONFIGURATION
+ * Location: ~/.config/rofi/config.rasi
+ * 
+ * QUICK TIPS:
+ * 1. Fonts: Use "JetBrainsMono Nerd Font" for the icons to show up.
+ * 2. Colors: Look for the 'Global Variables' section to change the theme.
+ * 3. Size: Change 'width' under the 'window' section to make it bigger/smaller.
+ */
+
+configuration {
+    /* --- 🛠️ GENERAL BEHAVIOR --- */
+    modi:                "drun,run,window"; // Modes: App Launcher, Commands, Window Switcher
+    show-icons:          true;              // Set to 'false' if you want no app icons
+    display-drun:        "🔍";              // Search icon
+    display-run:         "🚀";              // Run icon
+    display-window:      "🪟";              // Window icon
+    drun-display-format: "{name}";          // Only show app name (cleaner look)
+    terminal:            "qterminal";       // Which terminal to use for "run" mode
+    font:                "JetBrainsMono Nerd Font 12";
+}
+
+/* --- 🎨 COLOR PALETTE (Change these to change the whole theme!) --- */
+* {
+    bg:      #1e1e2e;  /* Deep Purple/Blue Background */
+    fg:      #cdd6f4;  /* Soft White Text */
+    accent:  #89b4fa;  /* Sky Blue (for borders and selection) */
+    urgent:  #f38ba8;  /* Red (for warnings or urgent apps) */
+    
+    /* These apply the colors above to the system */
+    background-color: @bg;
+    text-color:       @fg;
+}
+
+/* --- 🖼️ MAIN WINDOW (The Pop-up Box) --- */
+window {
+    width:            35%;     /* How much of the screen it covers (35% width) */
+    location:         center;  /* Can be: north, south, east, west, center */
+    anchor:           center;
+    border:           3px;     /* Thickness of the outer border */
+    border-radius:    12px;    /* Rounded corners for the main box */
+    border-color:     @accent; /* Uses the Blue color from above */
+    padding:          20px;    /* Space inside the box */
+}
+
+/* --- ⌨️ SEARCH BAR (Top Section) --- */
+inputbar {
+    children: [ prompt, entry ]; /* Order: [Icon, Text Field] */
+    spacing: 12px;               /* Space between icon and where you type */
+    margin: 0px 0px 15px 0px;    /* Space below the search bar */
+}
+
+prompt {
+    text-color: @accent;         /* Color of the 🔍 icon */
+}
+
+entry {
+    placeholder: "Search Apps..."; /* Text shown when search is empty */
+    placeholder-color: #585b70;    /* Dim gray color for placeholder */
+}
+
+/* --- 📜 THE LIST (App Icons and Names) --- */
+listview {
+    lines:      8;               // Number of apps to show at once
+    columns:    1;               // 1 for a list, 2 or 3 for a grid
+    spacing:    5px;
+    scrollbar:  true;           // Hide the scrollbar for a cleaner look
+}
+
+/* --- 🖱️ THE SELECTION (The Highlighted Item) --- */
+element {
+    padding:       8px;          /* Size of the highlight bar */
+    border-radius: 8px;          /* Rounded edges on the highlight bar */
+}
+
+element selected {
+    background-color: @accent;   /* Background color when hovering/selecting */
+    text-color:       @bg;       /* Text color switches to dark for contrast */
+}
+
+/* Icons inside the list */
+element-icon {
+    size: 24px;                  /* Size of app icons */
+    margin: 0 10px 0 0;          /* Space between icon and name */
+}
+}
+EOF
